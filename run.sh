@@ -45,4 +45,4 @@ echo "[6] Starting noVNC..."
 
 echo "[7] Launching app..."
 export DISPLAY=:1
-mousepad
+/usr/local/STMicroelectronics/STM32Cube/STM32CubeMX/STM32CubeMX -s /script
