@@ -9,11 +9,11 @@ docker compose up -d
 ```
 
 ### 3. Run NoVNC with a GUI app
-
+Go inside the container:
 ```
 docker compose exec novnc bash
 ```
-Run this:
+Run this in the container:
 ```
 /opt/novnc/run.sh
 ```
