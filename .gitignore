@@ -2,7 +2,7 @@
 *.o
 tests/data_*.js
 utils/rebind.so
-utils/websockify
+# utils/websockify
 /node_modules
 /build
 /lib
