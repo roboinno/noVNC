@@ -5,7 +5,6 @@ ENV DEBIAN_FRONTEND=noninteractive
 ENV LICENSE_ALREADY_ACCEPTED=1
 ENV TZ=Etc/UTC
 ENV PATH="${PATH}:/opt/st/stm32cubeide_${STM32CUBEIDE_VERSION}"
-# ENV DEFAULT_APP="/usr/local/STMicroelectronics/STM32Cube/STM32CubeMX/STM32CubeMX -s /script"
 ENV DEFAULT_APP="xclock"
 
 RUN apt-get -y update && apt-get -y install --no-install-recommends \

@@ -1,7 +1,7 @@
 services:
-  novnc:
+  infra:
     user: "root"
-    container_name: novnc
+    container_name: novnc-testing
     volumes:
       - ./:/opt/novnc:rw
     build:
@@ -11,11 +11,13 @@ services:
       - "8082:8082"
     tty: true
     stdin_open: true
-    networks:
-      - swarm_net
 
-networks:
-  swarm_net:
-    external: true
-    name: swarm-stack_vnc_net
+# UNCOMMENT IF WORKING ON SERVER
+#     networks:
+#       - swarm_net
+
+# networks:
+#   swarm_net:
+#     external: true
+#     name: swarm-stack_vnc_net
     
