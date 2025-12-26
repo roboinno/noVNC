@@ -1,3 +1,27 @@
+## How To Test This Tool
+### 1. Prepare
+If you are working on local machine, go to part 2. If you are working on the server (containig a swarm with nginx, certbog, etc), uncomment the commented part in the compose file.
+
+### 2. Run the Container
+
+```
+docker compose up -d
+```
+
+### Run NoVNC with a GUI app
+
+```
+docker compose exec novnc bash
+```
+Run this:
+```
+/opt/novnc/run.sh
+```
+By default, it will run `xclock` as a GUI app. if you want to run another GUI app, run with argument:
+```
+/opt/novnc/run.sh xclock
+```
+
 ## noVNC: HTML VNC client library and application
 
 [![Test Status](https://github.com/novnc/noVNC/workflows/Test/badge.svg)](https://github.com/novnc/noVNC/actions?query=workflow%3ATest)

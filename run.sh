@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+DEFAULT_APP="${DEFAULT_APP:-xclock}"
+
 echo "[1] Removing stale lock"
 rm -f /tmp/.X1-lock
 
@@ -45,4 +47,9 @@ echo "[6] Starting noVNC..."
 
 echo "[7] Launching app..."
 export DISPLAY=:1
-/usr/local/STMicroelectronics/STM32Cube/STM32CubeMX/STM32CubeMX -s /script
+
+if [ "$#" -eq 0 ]; then
+    exec $DEFAULT_APP
+else
+    exec "$@"
+fi
