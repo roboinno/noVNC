@@ -8,7 +8,7 @@ If you are working on local machine, go to part 2. If you are working on the ser
 docker compose up -d
 ```
 
-### Run NoVNC with a GUI app
+### 3. Run NoVNC with a GUI app
 
 ```
 docker compose exec novnc bash
